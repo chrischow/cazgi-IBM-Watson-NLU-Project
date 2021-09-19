@@ -94,7 +94,7 @@ app.get("/url/sentiment", (req,res) => {
      naturalLanguageUnderstanding.analyze(analyzeParams)
      .then(analysisResults => {
         //Print the JSON returned by NLU instance as a formatted string
-        console.log(JSON.stringify(analysisResults.result.keywords[0].emotion,null,2));
+        console.log(JSON.stringify(analysisResults.result.keywords[0].sentiment,null,2));
         //Please refer to the image to see the order of retrieval
         return res.send(analysisResults.result.keywords[0].sentiment,null,2);
      })
@@ -151,7 +151,7 @@ app.get("/text/sentiment", (req,res) => {
      naturalLanguageUnderstanding.analyze(analyzeParams)
      .then(analysisResults => {
         //Print the JSON returned by NLU instance as a formatted string
-        console.log(JSON.stringify(analysisResults.result.keywords[0].emotion,null,2));
+        console.log(JSON.stringify(analysisResults.result.keywords[0].sentiment,null,2));
         //Please refer to the image to see the order of retrieval
         return res.send(analysisResults.result.keywords[0].sentiment,null,2);
      })
